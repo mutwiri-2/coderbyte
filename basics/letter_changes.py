@@ -20,8 +20,15 @@ def LetterChanges(str):
         else:
             result += char
             continue
-    print(result)
+    list_result = list(result)
+    for i in range(len(list_result)):
+        if list_result[i] in 'aeiou':
+            list_result[i] = list_result[i].upper()
+    result = ''.join(list_result)
     return result
 
 # keep this function call here 
+print(LetterChanges("hello*3"))
+print(LetterChanges("fun times!"))
+print(LetterChanges("Argument goes here"))
 print(LetterChanges("hello*3"))
